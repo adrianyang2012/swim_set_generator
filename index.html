@@ -22,7 +22,7 @@
     #text {
       background-color:white;
       padding: 0px 0px 0px 800px;
-      width:100px;
+      width:50px;
       height:126px;
       overflow:auto;
       text-align:center;
@@ -38,7 +38,8 @@
       warm_up = (3+Math.round(Math.random()))*50
       document.getElementById("text").innerText += '\n'+warm_up.toString() + "warm up"
       test_length = test_length-warm_up
-      document.getElementById("text").innerText += '\nkick'
+      document.getElementById("text").innerText += '\n 200 kick'
+      test_length = test_length-200
     }
     
   </script>
