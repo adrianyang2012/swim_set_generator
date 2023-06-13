@@ -3,6 +3,9 @@
 <head>
   <title> Swimming set maker </title>
   <style>
+    * {
+      background-clip: content-box;
+    }
     body {
       background-repeat: no-repeat;
       background-position: top;
@@ -21,7 +24,6 @@
     }
     #text {
       background-color:white;
-      background-clip: content-box;
       width:100px;
       height:126px;
       overflow:auto;
@@ -34,10 +36,12 @@
       background-color:blue;
       float:left;
       clear:left;
+      margin: 50px;
     }
     .next_to {
       background-color:blue;
       float:left;
+      margin: 50px;
     }
   </style>
 </head>
@@ -63,7 +67,7 @@
     <button onclick="start()"> create swimming set </button>
     </div>
   <p id="text">Your set: </p>
-  <h2> Drills used </h2>
+  <h2 style="text_align: center"> Drills used </h2>
   <p class="decorated"> fist drill </p>
   <p class="next_to"> zipper drill </p>
 </body>
