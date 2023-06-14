@@ -34,6 +34,8 @@
     }
    
     .next_to {
+      margin-left: auto;
+      margin-right: auto;
       height:50px;
       width:100px;
       background-color:blue;
@@ -47,6 +49,14 @@
       margin-left: auto;
       margin-right: auto;
       text_align: center;
+    }
+    .shift_big {
+      clear:left;
+    }
+    @media (min_width: 992px) {
+      .shift_small{
+        clear:left;
+      }
     }
   </style>
 </head>
@@ -74,15 +84,14 @@
   <p id="text">Your set: </p>
   <h2> Drills used </h2>
   <p class="next_to"> fist drill </p>
-  <p class="next_to"> zipper drill </p>
+  <p class="next_to shift_small"> zipper drill </p>
   <p class="next_to"> head up drill </p>
-  <p class="next_to"> drag finger tips drill </p>
-  <p class="next_to"> with fins drill </p>
-  </br>
-  <p class="next_to"> 1 hand butterfly drill </p>
+  <p class="next_to shift_small"> drag finger tips drill </p>
+  <p class="next_to shift_big"> with fins drill </p>
+  <p class="next_to shift_small"> 1 hand butterfly drill </p>
   <p class="next_to"> 2-2-2 drill </p>
-  <p class="next_to"> freestyle kick and butterfly hand drill </p>
-  <p class="next_to"> with buoy drill </p>
-  <p class="next_to"> butterfly fist drill </p>
+  <p class="next_to shift_small"> freestyle kick and butterfly hand drill </p>
+  <p class="next_to shift_small"> with buoy drill </p>
+  <p class="next_to shift_small"> butterfly fist drill </p>
 </body>
 </html>
