@@ -82,7 +82,7 @@
           for (let i = 0; i < Math.floor(test_length/100); i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
           }
-          test_length = 0;
+          test_length = test_length/100-Math.floor(test_length/100);
         } else {
           for (let i = 0; i < 6; i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
