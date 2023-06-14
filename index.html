@@ -66,26 +66,26 @@
 <body>
   <script>
     function start() {
-      drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill"]
-      document.getElementById("text").innerText = 'Your set:'
-      set_length = prompt('What is the length of the set(minimum of 400)')
-      test_length = set_length
-      warm_up = (3+Math.round(Math.random()))*50
-      document.getElementById("text").innerText += '\n'+warm_up.toString() + " warm up"
-      test_length = test_length-warm_up
-      document.getElementById("text").innerText += '\n 200 kick'
+      drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill"];
+      document.getElementById("text").innerText = 'Your set:';
+      set_length = prompt('What is the length of the set(minimum of 400)');
+      test_length = set_length;
+      warm_up = (3+Math.round(Math.random()))*50;
+      document.getElementById("text").innerText += '\n'+warm_up.toString() + " warm up";
+      test_length = test_length-warm_up;
+      document.getElementById("text").innerText += '\n 200 kick';
       test_length = test_length-200
       if (test_length > 0) {
         if (test_length < 650) {
           for (let i = 0; i < test_length; i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1]
+            document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1];
           test_length = 0;
         }
         else {
           for (let i = 0; i < 600; i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1]
-            test_length = test_length-100
-          document.getElementById("text").innerText += '\n'+test_length.toString()+' cool down'
+            document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1];
+            test_length = test_length-100;
+          document.getElementById("text").innerText += '\n'+test_length.toString()+' cool down';
 
       }
     }
