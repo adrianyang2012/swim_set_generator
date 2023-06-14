@@ -82,7 +82,7 @@
           for (let i = 0; i < Math.floor(test_length/100); i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
           }
-          test_length = test_length/100-Math.floor(test_length/100);
+          test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < 4; i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
@@ -90,7 +90,7 @@
           }
         }
 	if (test_length > 0) {
-      		document.getElementById("text").innerText += '\n'+(test_length*100).toString()+' cool down';
+      		document.getElementById("text").innerText += '\n'+(test_length).toString()+' cool down';
 	}
             
 	
