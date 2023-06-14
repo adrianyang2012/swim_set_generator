@@ -88,9 +88,10 @@
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
             test_length = test_length-100;
           }
-          document.getElementById("text").innerText += '\n'+test_length.toString()+' cool down';
         }
-      
+	if (test_length > 0) {
+      		document.getElementById("text").innerText += '\n'+test_length.toString()+' cool down';
+	}
             
 	
       }
