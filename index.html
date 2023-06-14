@@ -78,13 +78,13 @@
       test_length = test_length-200
       if (test_length > 0) {
       
-        if (test_length < 650) {
+        if (test_length < 450) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
           }
           test_length = test_length/100-Math.floor(test_length/100);
         } else {
-          for (let i = 0; i < 6; i++) {
+          for (let i = 0; i < 4; i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
             test_length = test_length-100;
           }
