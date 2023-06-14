@@ -80,12 +80,11 @@
           for (let i = 0; i < test_length; i++) {
             document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1];
           test_length = 0;
-        }
-        else {
-          for (let i = 0; i < 600; i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1];
-            test_length = test_length-100;
-          document.getElementById("text").innerText += '\n'+test_length.toString()+' cool down';
+          } else {
+            for (let i = 0; i < 600; i++) {
+              document.getElementById("text").innerText += '\n100 ' + drills[(10*Math.round(Math.random()))-1];
+              test_length = test_length-100;
+            document.getElementById("text").innerText += '\n'+test_length.toString()+' cool down';
 
       }
     }
