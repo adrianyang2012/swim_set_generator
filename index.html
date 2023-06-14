@@ -24,7 +24,7 @@
     }
     #text {
       background-color:white;
-      width:100px;
+      width:200px;
       height:126px;
       overflow:auto;
       text-align:center;
@@ -72,25 +72,25 @@
       set_length = prompt('What is the length of the set(minimum of 400)');
       test_length = set_length;
       warm_up = (3+Math.round(Math.random()))*50;
-      document.getElementById("text").innerText += '\n'+warm_up.toString() + " warm up";
+      document.getElementById("text").innerText += '\n .'+warm_up.toString() + " warm up";
       test_length = test_length-warm_up;
-      document.getElementById("text").innerText += '\n 200 kick';
+      document.getElementById("text").innerText += '\n . 200 kick';
       test_length = test_length-200
       if (test_length > 0) {
       
         if (test_length < 450) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
+            document.getElementById("text").innerText += '\n .100 ' + drills[(Math.round(10*Math.random()))];
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < 4; i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
+            document.getElementById("text").innerText += '\n .100 ' + drills[(Math.round(10*Math.random()))];
             test_length = test_length-100;
           }
         }
 	if (test_length > 0) {
-      		document.getElementById("text").innerText += '\n'+(test_length).toString()+' cool down';
+      		document.getElementById("text").innerText += '\n .'+(test_length).toString()+' cool down';
 	}
             
 	
