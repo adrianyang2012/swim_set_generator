@@ -36,7 +36,7 @@
     .next_to {
       margin-left: auto;
       margin-right: auto;
-      height:50px;
+      height:80px;
       width:100px;
       background-color:blue;
       float:left;
@@ -67,6 +67,7 @@
 <body>
   <script>
     function start() {
+      fast_swims = ["100 free","100 fly","100 breast","100 back","100 IM","100 Frim"]
       drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms"];
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
@@ -89,6 +90,16 @@
             test_length = test_length-100;
           }
         }
+	if (test_length > 0){
+    	hundreds = 0;
+		for (let i = 0; i < Math.floor(0.6*(test_length)/100); i++) {
+			document.getElementById("text").innerText += '\n' + fast_swims[(Math.round(6*Math.random()))];
+            hundreds +=1
+            
+		}
+        test_length -= hundreds*100
+        
+	}
 	if (test_length > 0) {
       		document.getElementById("text").innerText += '\n'+(test_length).toString()+' cool down';
 	}
