@@ -91,13 +91,19 @@
           }
         }
 	if (test_length > 0){
-    	hundreds = 0;
-		for (let i = 0; i < Math.floor(0.9*(test_length)/100); i++) {
-			document.getElementById("text").innerText += '\n' + fast_swims[(Math.round(5*Math.random()))];
-            hundreds +=1
+		total_of = [0,0,0,0,0,0]
+		for (let i = 0; i < Math.floor(0.95*(test_length)/100); i++) {
+			rand = Math.round(5*Math.random())
+			total_of[rand] += 1
+            test_length = test_length - 100
             
 		}
-        test_length -= hundreds*100
+		for (let i = 0; i < 5; i++){
+        	if (total_of[i] > 0){
+				document.getElementById("text").innerText += '\n' + total_of[i] + 'x' + fast_swims[i]
+            }
+        }
+
         
 	}
 	if (test_length > 0) {
@@ -128,5 +134,6 @@
   <p class="next_to shift_small"> butterfly fist drill </p>
 </body>
 </html>
+
 
 
