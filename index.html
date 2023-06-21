@@ -80,36 +80,36 @@
       document.getElementById("text").innerText += '\n'+warm_up.toString() + " warm up";
       test_length = test_length-warm_up;
       document.getElementById("text").innerText += '\n200 kick';
-      test_length = test_length-200
+      test_length = test_length-200;
       if (test_length > 0) {
       
         if (test_length < 450) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
-            rand = Math.round((drills.length-1)*Math.random())
+            rand = Math.round((drills.length-1)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[rand];
-            drills.splice(rand,1)
+            drills.splice(rand,1);
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < 4; i++) {
-            rand = Math.round((drills.length-1)*Math.random())
+            rand = Math.round((drills.length-1)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(drills.length*Math.random()))];
             test_length = test_length-100;
-            drills.splice(rand,1)
+            drills.splice(rand,1);
             
           }
         }
 	if (test_length > 0){
-		total_of = [0,0,0,0,0,0]
+		total_of = [0,0,0,0,0,0];
 		for (let i = 0; i < Math.floor(0.98*(test_length)/100); i++) {
-			rand = Math.round(5*Math.random())
-			total_of[rand] += 1
-            test_length = test_length - 100
+			rand = Math.round(5*Math.random());
+			total_of[rand] += 1;
+            test_length = test_length - 100;
             
 		}
 		for (let i = 0; i < 5; i++){
         	if (total_of[i] > 0){
-				document.getElementById("text").innerText += '\n' + total_of[i] + 'x' + fast_swims[i]
+				document.getElementById("text").innerText += '\n' + total_of[i] + 'x' + fast_swims[i];
             }
         }
 
