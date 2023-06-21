@@ -85,14 +85,14 @@
       
         if (test_length < 450) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
-            rand = Math.round(drills.length*Math.random())
+            rand = Math.round((drills.length-1)*Math.random())
             document.getElementById("text").innerText += '\n100 ' + drills[rand];
             drills.splice(rand,1)
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < 4; i++) {
-            rand = Math.round(drills.length*Math.random())
+            rand = Math.round((drills.length-1)*Math.random())
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(drills.length*Math.random()))];
             test_length = test_length-100;
             drills.splice(rand,1)
