@@ -87,7 +87,7 @@
           for (let i = 0; i < Math.floor(test_length/100); i++) {
             rand = Math.round(drills.length*Math.random())
             document.getElementById("text").innerText += '\n100 ' + drills[rand];
-            delete drills[rand]
+            drills.splice(rand,1)
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
@@ -95,7 +95,7 @@
             rand = Math.round(drills.length*Math.random())
             document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(drills.length*Math.random()))];
             test_length = test_length-100;
-            delete drills[rand]
+            drills.splice(rand,1)
             
           }
         }
