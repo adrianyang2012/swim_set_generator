@@ -85,13 +85,18 @@
       
         if (test_length < 450) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
+            rand = Math.round(drills.length*Math.random())
+            document.getElementById("text").innerText += '\n100 ' + drills[rand];
+            delete drills[rand]
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < 4; i++) {
-            document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(10*Math.random()))];
+            rand = Math.round(drills.length*Math.random())
+            document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(drills.length*Math.random()))];
             test_length = test_length-100;
+            delete drills[rand]
+            
           }
         }
 	if (test_length > 0){
