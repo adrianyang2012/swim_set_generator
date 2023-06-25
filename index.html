@@ -84,14 +84,14 @@
 <body>
   <script>
     document.getElementById("text").innerText = 'Your set:';
-    document.getElementById("drills").style.display = "none";
-    
     function show_drills() {
       obj = document.getElementById("drills");
       if (obj.style.display == "none") {
 	obj.style.display = "block";
+    document.getElementById("text").style.height = "180px";
       } else {
 	      obj.style.display = "none";
+          document.getElementById("text").style.height = "500px";
       }
     }
     function start() {
