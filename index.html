@@ -14,12 +14,15 @@
       background-size: 2000px;
       background-image: url("https://media.istockphoto.com/id/136694824/photo/athlete-swimming-freestyle-on-blue-background-underwater-view.jpg?s=170667a&w=0&k=20&c=SjYzgysN5p7mRVF_ztDPWgfTRKhXsCiA-QxrOQE_q2k=")
     }
-    .drills {
+    h2 {
       margin-left:auto;
       margin-right:auto;
     }
     .first {
       
+      text-align:center;
+    }
+    .drills {
       text-align:center;
     }
     button {
@@ -67,6 +70,8 @@
     @media (max-width: 600px) {
       .shift_small {
         clear:left;
+        margin-left: auto;
+      	margin-right: auto;
       }
       .shift_big {
         clear:none;
@@ -108,11 +113,10 @@
         }
 	if (test_length > 200){
 		total_of = [0,0,0,0,0,0,0,0,0];
-		for (let i = 0; i < Math.floor(test_length/100-1); i++) {
-			rand = Math.round(5*Math.random());
+		for (let i = 0; i < test_length-2; i+=100) {
+			rand = Math.round(9*Math.random());
 			total_of[rand] += 1;
-            test_length = test_length - 100;
-            
+        test_length = test_length - i;            
 		}
 		for (let i = 0; i < 5; i++){
         if (total_of[i] > 0){
@@ -135,10 +139,11 @@
   <div class="first">
     <h1 style="color:white"> Swimming set generator </h1>
     <button onclick="start()"> create swimming set </button>
-    </div>
+  </div>
   <p id="text">Your set: </p>
-  <h2> Drills used </h2>
+
   <div class="drills">
+  <h2> Drills used </h2>
   <p class="next_to shift_small"> fist drill </p>
   <p class="next_to"> zipper drill </p>
   <p class="next_to shift_small"> head up drill </p>
@@ -152,3 +157,4 @@
   </div>
 </body>
 </html>
+
