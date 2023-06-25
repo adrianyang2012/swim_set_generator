@@ -22,7 +22,8 @@
       
       text-align:center;
     }
-    .drills {
+    #drills {
+      height:200px;
       text-align:center;
     }
     button {
@@ -82,6 +83,17 @@
 </head>
 <body>
   <script>
+    document.getElementById("text").innerText = 'Your set:';
+    document.getElementById("drills").style.display = "none";
+    
+    function show_drills() {
+      obj = document.getElementById("drills");
+      if (obj.style.display == "none") {
+	obj.style.display = "block";
+      } else {
+	      obj.style.display = "none";
+      }
+    }
     function start() {
       fast_swims = ["100 free","25x4 fly","100 breast","100 back","100 IM","100 Frim","4x25 free sprint","100 pull","50x2 fly"]
       drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms"];
@@ -97,7 +109,7 @@
       
         if (test_length < 450) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
-            rand = Math.round((drills.length-1)*Math.random());
+            rand = Math.round((drills.length)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[rand];
             drills.splice(rand,1);
           }
@@ -141,20 +153,19 @@
     <button onclick="start()"> create swimming set </button>
   </div>
   <p id="text">Your set: </p>
-
-  <div class="drills">
-  <h2> Drills used </h2>
-  <p class="next_to shift_small"> fist drill </p>
-  <p class="next_to"> zipper drill </p>
-  <p class="next_to shift_small"> head up drill </p>
-  <p class="next_to"> drag finger tips drill </p>
-  <p class="next_to shift_small"> with fins drill </p>
-  <p class="next_to shift_big"> 1 hand butterfly drill </p>
-  <p class="next_to shift_small"> 2-2-2 drill </p>
-  <p class="next_to"> freestyle kick and butterfly hand drill </p>
-  <p class="next_to shift_small"> with buoy drill </p>
-  <p class="next_to"> butterfly fist drill </p>
+  <button onclick="show_drills()">show/hide drills</button>
+  <div id="drills">
+  	<h2 > Drills used </h2>
+  	<p class="next_to shift_small"> fist drill </p>
+  	<p class="next_to"> zipper drill </p>
+  	<p class="next_to shift_small"> head up drill </p>
+  	<p class="next_to"> drag finger tips drill </p>
+  	<p class="next_to shift_small"> with fins drill </p>
+  	<p class="next_to shift_big"> 1 hand butterfly drill </p>
+  	<p class="next_to shift_small"> 2-2-2 drill </p>
+  	<p class="next_to"> freestyle kick and butterfly hand drill </p>
+  	<p class="next_to shift_small"> with buoy drill </p>
+  	<p class="next_to"> butterfly fist drill </p>
   </div>
 </body>
 </html>
-
