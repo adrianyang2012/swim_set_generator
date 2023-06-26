@@ -116,8 +116,8 @@
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < 4; i++) {
-            rand = Math.round((drills.length-1)*Math.random());
-            document.getElementById("text").innerText += '\n100 ' + drills[(Math.round(drills.length*Math.random()))];
+            rand = Math.floor((drills.length-1)*Math.random());
+            document.getElementById("text").innerText += '\n100 ' + drills[rand];
             test_length = test_length-100;
             drills.splice(rand,1);
             
@@ -125,10 +125,10 @@
         }
 	if (test_length > 200){
 		total_of = [0,0,0,0,0,0,0,0,0];
-		for (let i = 0; i < test_length-200; i+=100) {
+		for (let i = 0; i < test_length; i+=100) {
 			rand = Math.floor(9*Math.random());
 			total_of[rand] += 1;
-        test_length = test_length - i;            
+        	test_length = test_length - 100;            
 		}
 		for (let i = 0; i < 9; i++){
         if (total_of[i] > 0){
