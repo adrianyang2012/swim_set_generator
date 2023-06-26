@@ -125,12 +125,12 @@
         }
 	if (test_length > 200){
 		total_of = [0,0,0,0,0,0,0,0,0];
-		for (let i = 0; i < test_length-2; i+=100) {
-			rand = Math.round(9*Math.random());
+		for (let i = 0; i < test_length-200; i+=100) {
+			rand = Math.floor(9*Math.random());
 			total_of[rand] += 1;
         test_length = test_length - i;            
 		}
-		for (let i = 0; i < 5; i++){
+		for (let i = 0; i < 9; i++){
         if (total_of[i] > 0){
 		document.getElementById("text").innerText += '\n' + total_of[i] + 'x' + fast_swims[i];
             }
