@@ -99,6 +99,8 @@
       drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms"];
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
+      type = prompt("do you wan't you (1) improve your spring and endurance or (2) swimming postures.(type the number)")
+      drill_length = type*200
       test_length = set_length;
       warm_up = (3+Math.round(Math.random()))*50;
       document.getElementById("text").innerText += '\n'+warm_up.toString() + " warm up";
@@ -107,7 +109,7 @@
       test_length = test_length-200;
       if (test_length > 0) {
       
-        if (test_length < 450) {
+        if (test_length < drill_length+50) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
             rand = Math.round((drills.length)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[rand];
@@ -115,7 +117,7 @@
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
-          for (let i = 0; i < 4; i++) {
+          for (let i = 0; i < drill_length/100; i++) {
             rand = Math.floor((drills.length-1)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[rand];
             test_length = test_length-100;
