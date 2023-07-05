@@ -98,7 +98,7 @@
       drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms"];
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
-      stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly')
+      stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly')-1
       type_swim = prompt("do you want you (1) improve your sprint and endurance(with less drills) or (2) swimming postures(more drills) or (3) custom ammount of drills.(type the number)")
       if (type_swim==='3'){
 	      drill_length = prompt("how much laps?(no more then 11)")*100
@@ -133,7 +133,7 @@
 		total_of = [0,0,0,0,0,0,0,0,0];
         new_test = test_length;
 		for (let i = 0; i < test_length-200; i+=100) {
-			rand = Math.floor(9*Math.random());
+			rand = Math.floor(fast_swims[stroke].length*Math.random());
 			total_of[rand] += 1;    
             new_test = new_test-100
 		}
@@ -141,7 +141,7 @@
 
 		for (let i = 0; i < 9; i++){
         if (total_of[i] > 0){
-		document.getElementById("text").innerText += '\n' + total_of[i] + 'x' + fast_swims[i];
+		document.getElementById("text").innerText += '\n' + total_of[i] + 'x' + fast_swims[stroke][i];
             }
         }
 
