@@ -8,7 +8,7 @@
       background-clip: content-box;
     }
     body {
-      background-repeat: no-repeat;
+      
       background-position: top;
 
       background-size: 2000px;
@@ -67,6 +67,9 @@
     .shift_big {
       clear:left;
     }
+    @media (min-width:779px){
+	    background-repeat: no-repeat;
+    }
     @media (max-width: 600px) {
       .shift_small {
         clear:left;
@@ -75,7 +78,6 @@
       }
       .shift_big {
         clear:none;
-        color:yellow;
       }
     }
   </style>
