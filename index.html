@@ -7,6 +7,9 @@
     * {
       background-clip: content-box;
     }
+    h3 {
+    	clear:both;
+    }
     body {
       
       background-position: top;
@@ -64,9 +67,7 @@
       margin-right: auto;
       text_align: center;
     }
-    .shift_big {
-      clear:left;
-    }
+
     @media (min-width:779px){
 	    background-repeat: no-repeat;
     }
@@ -97,7 +98,7 @@
     }
     function start() {
       fast_swims = [["100 free","25x4 fly","100 breast","100 back","100 IM","100 Frim","4x25 free sprint","100 pull","50x2 fly"],['100 free','4x25 free sprint','100 pull','100 Frim'],['100 back','100 IM','100 Frim'],['100 breast','100 Frim','100 IM'],['100 fly','100 IM']];
-      drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms"];
+      drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms","cobra strike drill","3 kick drill","breaststroke kick on back","under water dolphin kick","backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"];
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
       stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly')-1;
@@ -168,18 +169,30 @@
   <button onclick="show_drills()">show/hide drills</button>
   <div id="drills">
   	<h2> Drills used </h2>
-	<h3> freestyle </h3>
+    <h3> freestyle </h3>
   	<p class="next_to shift_small"> fist drill </p>
   	<p class="next_to"> zipper drill </p>
   	<p class="next_to shift_small"> head up drill </p>
   	<p class="next_to"> drag finger tips drill </p>
   	<p class="next_to shift_small"> with fins drill </p>
-	<h3> butterfly </h3>
-  	<p class="next_to shift_big"> 1 hand butterfly drill </p>
+    <h3> butterfly </h3>
+  	<p class="next_to"> 1 hand butterfly drill </p>
   	<p class="next_to shift_small"> 2-2-2 drill </p>
   	<p class="next_to"> freestyle kick and butterfly hand drill </p>
   	<p class="next_to shift_small"> with buoy drill </p>
   	<p class="next_to"> butterfly fist drill </p>
+    <h3> breaststroke </h3>
+    <p class="next_to"> cobra strike drill </p>
+    <p class="next_to">butterfly kick breast arms</p>
+    <p class="next_to shift_small">heal tag drill</p>
+    <p class="next_to">3 kick breast drill</p>
+    <p class="next_to shift_small">breaststroke kick on back</p>
+	<h3> backstroke </h3>
+    <p class="next_to">backstroke pull</p>
+    <p class="next_to shift_small">under water backstroke</p>
+    <p class="next_to">butterfly kick on back</p>
+    <p class="next_to shift_small">breaststroke kick on back</p>
+    <p class="next_to">windmill drill</p>
   </div>
 </body>
 </html>
