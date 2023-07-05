@@ -26,7 +26,6 @@
       text-align:center;
     }
     #drills {
-      width:50%;
       height:200px;
       text-align:center;
     }
@@ -78,9 +77,7 @@
         margin-left: auto;
       	margin-right: auto;
       }
-      .shift_big {
-        clear:none;
-      }
+
     }
   </style>
 </head>
@@ -99,13 +96,13 @@
     }
     function start() {
       fast_swims = [["100 free","25x4 fly","100 breast","100 back","100 IM","100 Frim","4x25 free sprint","100 pull","50x2 fly"],['100 free','4x25 free sprint','100 pull','100 Frim'],['100 back','100 IM','100 Frim'],['100 breast','100 Frim','100 IM'],['100 fly','100 IM']];
-      drills = ["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","butterfly kick breast arms","cobra strike drill","3 kick drill","breaststroke kick on back","under water dolphin kick","backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"];
+      drills = [["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","cobra strike drill","3 kick breast drill","heal tag drill","butterfly kick breast arms","under water dolphin kick","backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"],["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill"],["backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"],["cobra strike drill","3 kick breast drill","butterfly kick breast arms","heal tag drill","breaststroke kick on back"],["1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill"]];
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
       stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly')-1;
       type_swim = prompt("do you want you (1) improve your sprint and endurance(with less drills) or (2) swimming postures(more drills) or (3) custom ammount of drills.(type the number)");
       if (type_swim==='3'){
-	      drill_length = prompt("how much laps?(no more then 11)")*100
+	      drill_length = prompt("how much laps?(no more then "+ drills[stroke].length+')')*100
       } else {
       	drill_length = type_swim*200
       }
@@ -119,17 +116,17 @@
       
         if (test_length < drill_length+50) {
           for (let i = 0; i < Math.floor(test_length/100); i++) {
-            rand = Math.round((drills.length)*Math.random());
-            document.getElementById("text").innerText += '\n100 ' + drills[rand];
-            drills.splice(rand,1);
+            rand = Math.round((drills[stroke].length)*Math.random());
+            document.getElementById("text").innerText += '\n100 ' + drills[stroke][rand];
+            drills[stroke].splice(rand,1);
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
           for (let i = 0; i < drill_length/100; i++) {
-            rand = Math.floor((drills.length-1)*Math.random());
-            document.getElementById("text").innerText += '\n100 ' + drills[rand];
+            rand = Math.floor((drills[stroke].length-1)*Math.random());
+            document.getElementById("text").innerText += '\n100 ' + drills[stroke][rand];
             test_length = test_length-100;
-            drills.splice(rand,1);
+            drills[stroke].splice(rand,1);
             
           }
         }
