@@ -25,6 +25,9 @@
       
       text-align:center;
     }
+    .shift_big {
+    	margin-left: 20vw;
+    }
     #drills {
       height:200px;
       text-align:center;
@@ -50,8 +53,7 @@
     }
    
     .next_to {
-      margin-left: auto;
-      margin-right: auto;
+	  
       height:80px;
       width:100px;
       background-color:blue;
@@ -71,11 +73,17 @@
     @media (min-width:779px){
 	    background-repeat: no-repeat;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 896px) {
       .shift_small {
         clear:left;
-        margin-left: auto;
-      	margin-right: auto;
+        margin-left: 20vw;
+
+      }
+    @media (max-width: 370px) {
+      .next_to {
+        clear:left;
+        margin-left: 20vw;
+
       }
 
     }
@@ -168,25 +176,25 @@
   <div id="drills">
   	<h2> Drills used </h2>
     <h3> freestyle </h3>
-  	<p class="next_to shift_small"> fist drill </p>
+  	<p class="next_to shift_small shift_big"> fist drill </p>
   	<p class="next_to"> zipper drill </p>
   	<p class="next_to shift_small"> head up drill </p>
   	<p class="next_to"> drag finger tips drill </p>
   	<p class="next_to shift_small"> with fins drill </p>
     <h3> butterfly </h3>
-  	<p class="next_to"> 1 hand butterfly drill </p>
+  	<p class="next_to shift_big"> 1 hand butterfly drill </p>
   	<p class="next_to shift_small"> 2-2-2 drill </p>
   	<p class="next_to"> freestyle kick and butterfly hand drill </p>
   	<p class="next_to shift_small"> with buoy drill </p>
   	<p class="next_to"> butterfly fist drill </p>
     <h3> breaststroke </h3>
-    <p class="next_to"> cobra strike drill </p>
+    <p class="next_to shift_big"> cobra strike drill </p>
     <p class="next_to">butterfly kick breast arms</p>
     <p class="next_to shift_small">heal tag drill</p>
     <p class="next_to">3 kick breast drill</p>
     <p class="next_to shift_small">breaststroke kick on back</p>
 	<h3> backstroke </h3>
-    <p class="next_to">backstroke pull(with buoy)</p>
+    <p class="next_to shift_big">backstroke pull(with buoy)</p>
     <p class="next_to shift_small">under water backstroke</p>
     <p class="next_to">butterfly kick on back</p>
     <p class="next_to shift_small">breaststroke kick on back</p>
