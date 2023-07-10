@@ -112,9 +112,9 @@
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
       stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly')-1;
-      type_swim = Number(prompt("do you want you (1) improve your sprint and endurance(with less drills) or (2) swimming postures(more drills) or (3) custom ammount of drills.(type the number)"));
+      type_swim = prompt("do you want you (1) improve your sprint and endurance(with less drills) or (2) swimming postures(more drills) or (3) custom ammount of drills.(type the number)");
       if (type_swim==='3'){
-	      drill_length = prompt("how much yards of drills?(no more then "+ drills[stroke].length*100+')')
+	      drill_length = Number(prompt("how much yards of drills?(no more then "+ drills[stroke].length*100+')'))
       } else {
       	drill_length = type_swim*200
       }
