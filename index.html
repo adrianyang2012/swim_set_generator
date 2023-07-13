@@ -120,7 +120,7 @@
       document.getElementById("text").innerText = 'Your set:';
       set_length = prompt('What is the length of the set(minimum of 400)');
       stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly')-1;
-      type_swim = prompt("do you want you (1) improve your sprint and endurance(with less drills) or (2) swimming postures(more drills) or (3) custom ammount of drills.(type the number)");
+      type_swim = prompt("do you want you (1) improve your sprint and endurance(with 2 drills) or (2) swimming postures(with 4 drills) or (3) custom ammount of drills.(type the number)");
       if (type_swim==='3'){
 	      drill_length = Number(prompt("how much yards of drills?(no more then "+ drills[stroke].length*100+')'))
       } else {
@@ -132,7 +132,9 @@
       test_length = test_length-warm_up;
       document.getElementById("text").innerText += '\n200 kick';
       test_length = test_length-200;
-
+      if (drill_length>drills[stroke].length*100) {
+	      alert('To much drills')
+      } else {
       if (test_length > 0) {
 
         if (test_length < drill_length+50) {
@@ -177,7 +179,7 @@
             
 	
       }
-      
+      }
     }
     
   </script>
