@@ -103,6 +103,7 @@
         background-color:white;
         width:8vw;
         height:200px;
+
     }
 
 	@media (min-width:1500px) {
@@ -131,10 +132,11 @@
         	margin-left:25vw;
         }
     }
-    @media (max-width:1100px) {
-	    .current_drill {
-		    visibility:hidden;
-	    }
+	.current_drill {
+    	visiblity:hidden;
+    }
+    #drills:hover + p {
+    	visibility:none;
     }
     @media (min-width:1400px) {
 	    .current_drill {
@@ -145,7 +147,7 @@
 </head>
 <body>
   
-  <p class="current_drill" id="drill_information">about the drill</p>
+  
   <div class="first">
     <h1 style="color:white"> Swimming set generator </h1>
     <h2 style="color:white"> Set Length </h2>
@@ -185,6 +187,8 @@
     <div class="next_to shift_small" onmouseover="edit_drill('do breastroke pull on your back)">breaststroke kick on back</div>
     <div class="next_to shift_normal" onmouseover="edit_drill('swing your arms as fast as possible')">windmill drill</div>
   </div>
+  <p class="current_drill" id="drill_information">about the drill</p>
+
   <footer style="clear:left; color:white; text-align:center;">
   Credits to Myswimpro, Fares Ksebati, SwimLifeGuru, and Jarasport
   </footer>
