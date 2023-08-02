@@ -218,6 +218,7 @@
       }
       test_length = set_length;
       warm_up = (3+Math.round(Math.random()))*50;
+      document.getElementById("text").innerText + '-------warm up---------'
       document.getElementById("text").innerText += '\n'+warm_up.toString() + " Warm Up";
       test_length = test_length-warm_up;
       document.getElementById("text").innerText += '\n200 kick';
@@ -230,8 +231,11 @@
 		document.getElementById("text").innerText += '\n6x50 IM order (butterfly to back back to breast and then breast to free and repeat)';
 		test_length = test_length-200;
 		}
-        if (test_length < drill_length+50) {
+	if (test_length>0) {
+        document.getElementById("text").innerText + '-------drill set---------'
 
+        if (test_length < drill_length+50) {
+	
           for (let i = 0; i < Math.floor(test_length/100); i++) {
             rand = Math.floor((drills[stroke].length)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[stroke][rand];
@@ -239,6 +243,7 @@
           }
           test_length = (test_length/100-Math.floor(test_length/100))*100;
         } else {
+	  
           for (let i = 0; i < drill_length/100; i++) {
             rand = Math.floor((drills[stroke].length-1)*Math.random());
             document.getElementById("text").innerText += '\n100 ' + drills[stroke][rand];
@@ -247,7 +252,10 @@
             
           }
         }
+	}
 	if (test_length > 200){
+		document.getElementById("text").innerText + '-------main set---------'
+
 		total_of = [0,0,0,0,0,0,0,0,0];
         new_test = test_length;
 		for (let i = 0; i < test_length-200; i+=100) {
@@ -267,6 +275,8 @@
         
 	}
 	if (test_length > 0) {
+			  document.getElementById("text").innerText + '-------cool down---------'
+
       		document.getElementById("text").innerText += '\n'+(test_length).toString()+' Cool Down';
 	}
             
