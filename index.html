@@ -218,7 +218,7 @@
       }
       test_length = set_length;
       warm_up = (3+Math.round(Math.random()))*50;
-      document.getElementById("text").innerText + '-------warm up---------'
+      document.getElementById("text").innerText += '\n--------warm up---------';
       document.getElementById("text").innerText += '\n'+warm_up.toString() + " Warm Up";
       test_length = test_length-warm_up;
       document.getElementById("text").innerText += '\n200 kick';
@@ -232,7 +232,7 @@
 		test_length = test_length-200;
 		}
 	if (test_length>0) {
-        document.getElementById("text").innerText + '-------drill set---------'
+        document.getElementById("text").innerText += '\n-------drill set---------';
 
         if (test_length < drill_length+50) {
 	
@@ -254,7 +254,7 @@
         }
 	}
 	if (test_length > 200){
-		document.getElementById("text").innerText + '-------main set---------'
+		document.getElementById("text").innerText += '\n--------main set---------';
 
 		total_of = [0,0,0,0,0,0,0,0,0];
         new_test = test_length;
@@ -275,7 +275,7 @@
         
 	}
 	if (test_length > 0) {
-			  document.getElementById("text").innerText + '-------cool down---------'
+			  document.getElementById("text").innerText += '\n--------cool down---------';
 
       		document.getElementById("text").innerText += '\n'+(test_length).toString()+' Cool Down';
 	}
