@@ -67,16 +67,12 @@
       margin-right: auto;
       
     }
-    #text:hover{
+    #text:hover {
 	    height:350px;
     }
    
     .next_to {
-      background-image:url("https://cdn-icons-png.flaticon.com/256/1384/1384060.png");
-      background-position:center;
-      background-repeat:no-repeat;
-      background-size:100px;
-	  background-color:blue;
+ 
       box-sizing: border-box;  
       height:108px;
       width:128px;
@@ -88,7 +84,19 @@
       margin-top:10px;
       border-radius:10px;      
 
-
+	
+    }
+    #freestyle {
+    	background-color:blue;
+    }
+    #butterfly {
+    	background-color:orange;
+    }
+    #breaststroke {
+    	background-color:purple;
+    }
+    #backstroke {
+    	background-color:pink;
     }
     h2 {
       margin-left: auto;
@@ -164,29 +172,29 @@
   <div id="drills">
   	<h2> Drills used (hover to learn more)</h2>
     <h3> Freestyle </h3>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=HH0TlKA-UFU"><div class="next_to shift_small shift_big" onmouseover="edit_drill('Use your fist instead of your palm')"> fist drill</div></a>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=Ul_By69Mc8Y"><div class="next_to" onmouseover="edit_drill('when swinging your arms, you should tap your hips, shoulders, and then head')"> zipper drill </div></a>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=nYVH4TVNDLY"><div class="next_to shift_small" onmouseover="edit_drill('bring your head up')"> head up drill </div></a>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=Bt1hdL89dM0"><div class="next_to" onmouseover="edit_drill('drag your fingertips when you bring your arm forward')"> drag finger tips drill </div></a>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=8fGiNwlnS0g"><div class="next_to shift_small shift_normal" onmouseover="edit_drill('Use fins in freestyle')"> with fins drill </div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=HH0TlKA-UFU"><div id="freestyle" class="next_to shift_small shift_big" onmouseover="edit_drill('Use your fist instead of your palm')"> fist drill</div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=Ul_By69Mc8Y"><div id="freestyle" class="next_to" onmouseover="edit_drill('when swinging your arms, you should tap your hips, shoulders, and then head')"> zipper drill </div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=nYVH4TVNDLY"><div id="freestyle" class="next_to shift_small" onmouseover="edit_drill('bring your head up')"> head up drill </div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=Bt1hdL89dM0"><div id="freestyle" class="next_to" onmouseover="edit_drill('drag your fingertips when you bring your arm forward')"> drag finger tips drill </div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=8fGiNwlnS0g"><div id="freestyle" class="next_to shift_small shift_normal" onmouseover="edit_drill('Use fins in freestyle')"> with fins drill </div></a>
     <h3> Butterfly </h3>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=Zj77HGobUjI"><div class="next_to shift_big" onmouseover="edit_drill('do butterfly with one hand')"> 1 hand butterfly drill</div></a>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=bBGd8ZcWgMU"><div class="next_to shift_small" onmouseover="edit_drill('do 2 butterfly pulls with 1 hand and 2 with the other and then do two normally')"> 2-2-2 drill </div></a>
-  	<a target="_blank" href="https://www.youtube.com/watch?v=kHrdE5CG2yc"><div class="next_to" onmouseover="edit_drill('Use your whole body when doing dolphin kick')">butterfly flow drill </div></a>
-  	<a target="_blank" href="https://www.youtube.com/shorts/K6F5Bfta_QI"><div class="next_to shift_small" onmouseover="edit_drill('do freestyle kick with butterfly hands')"> freestyle kick butterfly hands </div></a>
-  	<a target="_blank" href="https://www.youtube.com/shorts/K6F5Bfta_QI"><p class="next_to shift_normal" onmouseover="edit_drill('use your fist instead of your palm when doing butterfly')"> butterfly fist drill </p></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=Zj77HGobUjI"><div id="butterfly" class="next_to shift_big" onmouseover="edit_drill('do butterfly with one hand')"> 1 hand butterfly drill</div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=bBGd8ZcWgMU"><div id="butterfly" class="next_to shift_small" onmouseover="edit_drill('do 2 butterfly pulls with 1 hand and 2 with the other and then do two normally')"> 2-2-2 drill </div></a>
+  	<a target="_blank" href="https://www.youtube.com/watch?v=kHrdE5CG2yc"><div id="butterfly" class="next_to" onmouseover="edit_drill('Use your whole body when doing dolphin kick')">butterfly flow drill </div></a>
+  	<a target="_blank" href="https://www.youtube.com/shorts/K6F5Bfta_QI"><div id="butterfly" class="next_to shift_small" onmouseover="edit_drill('do freestyle kick with butterfly hands')"> freestyle kick butterfly hands </div></a>
+  	<a target="_blank" href="https://www.youtube.com/shorts/K6F5Bfta_QI"><p id="butterfly" class="next_to shift_normal" onmouseover="edit_drill('use your fist instead of your palm when doing butterfly')"> butterfly fist drill </p></a>
     <h3> Breaststroke </h3>
-    <a target="_blank" href="https://www.youtube.com/watch?v=KZxZ7D6w0bk"><div class="next_to shift_big" onmouseover="edit_drill('do breaststroke pull with a butterfly kick to bring your legs up')"> butterfly/kick breast arms</div></a>
-    <a target="_blank" href="https://www.youtube.com/watch?v=-2-mdGviPHc"><div class="next_to" onmouseover="edit_drill('do freestyle kick with breaststroke arms')">free kick/breast arms </div></a>
-    <a target="_blank" href="https://www.youtube.com/watch?v=GvXL-2UU99g"><div class="next_to shift_small" onmouseover="edit_drill('put your arms on your heal in breaststroke')">heal tag drill</div></a>
-    <a target="_blank" href="https://www.youtube.com/watch?v=mrW1QN44ZGQ"><div class="next_to" onmouseover="edit_drill('do 2 kick before doing breaststroke pull')">2 kick breast drill</div></a>a
-    <a target="_blank" href="https://www.youtube.com/watch?v=sudML0wp6Pw"><div class="next_to shift_small shift_normal" onmouseover="edit_drill('do breaststroke kick on back')">breaststroke kick on back</div></a>
+    <a target="_blank" href="https://www.youtube.com/watch?v=KZxZ7D6w0bk"><div id="breaststroke" class="next_to shift_big" onmouseover="edit_drill('do breaststroke pull with a butterfly kick to bring your legs up')"> butterfly/kick breast arms</div></a>
+    <a target="_blank" href="https://www.youtube.com/watch?v=-2-mdGviPHc"><div id="breaststroke" class="next_to" onmouseover="edit_drill('do freestyle kick with breaststroke arms')">free kick/breast arms </div></a>
+    <a target="_blank" href="https://www.youtube.com/watch?v=GvXL-2UU99g"><div id="breaststroke" class="next_to shift_small" onmouseover="edit_drill('put your arms on your heal in breaststroke')">heal tag drill</div></a>
+    <a target="_blank" href="https://www.youtube.com/watch?v=mrW1QN44ZGQ"><div id="breaststroke" class="next_to" onmouseover="edit_drill('do 2 kick before doing breaststroke pull')">2 kick breast drill</div></a>a
+    <a target="_blank" href="https://www.youtube.com/watch?v=sudML0wp6Pw"><div id="breaststroke" class="next_to shift_small shift_normal" onmouseover="edit_drill('do breaststroke kick on back')">breaststroke kick on back</div></a>
 	<h3> Backstroke </h3>
-    <div class="next_to shift_big" onmouseover="edit_drill('do backstroke pull with a buoy')">backstroke pull(with buoy)</div>
-    <div class="next_to shift_small" onmouseover="edit_drill('do backstroke under water')">under water backstroke</div>
-    <div class="next_to" onclick="edit_drill('do underwater dolphin kick on back')">butterfly kick on back</div>
-    <div class="next_to shift_small" onmouseover="edit_drill('do breastroke pull on your back)">breaststroke kick on back</div>
-    <div class="next_to shift_normal" onmouseover="edit_drill('swing your arms as fast as possible')">windmill drill</div>
+    <div id="backstroke" class="next_to shift_big" onmouseover="edit_drill('do backstroke pull with a buoy')">backstroke pull(with buoy)</div>
+    <div id="backstroke" class="next_to shift_small" onmouseover="edit_drill('do backstroke under water')">under water backstroke</div>
+    <div id="backstroke" class="next_to" onclick="edit_drill('do underwater dolphin kick on back')">butterfly kick on back</div>
+    <div id="backstroke" class="next_to shift_small" onmouseover="edit_drill('do breastroke pull on your back)">breaststroke kick on back</div>
+    <div id="backstroke" class="next_to shift_normal" onmouseover="edit_drill('swing your arms as fast as possible')">windmill drill</div>
   </div>
   <p class="current_drill" id="drill_information">about the drill</p>
 
