@@ -16,8 +16,8 @@
     }
     body {
       background-position: top;
-      background-size: 2000px;
-      background-image: url("https://media.istockphoto.com/id/136694824/photo/athlete-swimming-freestyle-on-blue-background-underwater-view.jpg?s=170667a&w=0&k=20&c=SjYzgysN5p7mRVF_ztDPWgfTRKhXsCiA-QxrOQE_q2k=")
+      background-size: 3000px;
+      background-image: url("https://wallpaperaccess.com/full/2151201.jpg")
     }
     h2 {
       margin-left:auto;
@@ -87,7 +87,9 @@
 
 	
     }
-
+	.next_to:hover {
+    	border-color: rgb(255,255,255);
+    }
     #freestyle {
     	background-color:blue;
     }
@@ -166,7 +168,7 @@
   
   
   <div class="first">
-    <h1 style="color:white"> Swimming set generator </h1>
+    <h1> Swimming set generator </h1>
     <h2 style="color:white"> Set Length </h2>
   	<button onclick="getElementById('length').value = Number(getElementById('length').value)+50; display(getElementById('length'));">increase set length</button>
     <button onclick="getElementById('length').value-=50; display(getElementById('length'));">decrease set length</button>
@@ -246,7 +248,7 @@
       } else {
       if (test_length > 0) {
         if (test_length>300 && stroke===5 && type_swim === '1')  {
-		document.getElementById("text").innerText += '\n6x50 IM order (butterfly to back back to breast, then breast to free, and then repeat)';
+		document.getElementById("text").innerText += '\n6x50 IM order (butterfly to back back to breast and then breast to free and repeat)';
 		test_length = test_length-200;
 		}
 	if (test_length>0) {
