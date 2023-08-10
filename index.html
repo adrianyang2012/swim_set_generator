@@ -23,10 +23,10 @@
       margin-left:auto;
       margin-right:auto;
     }
-    .set_length {
-	font-size:18px;
+    .displaying{
+		font-size:30px;
     	margin:auto;
-	color:white;
+		color:white;
     }
     input {
         width:100%;
@@ -175,7 +175,11 @@
     <button onclick="getElementById('length').value-=50; display(getElementById('length'));">decrease set length</button>
     <input type='range' onchange="display(this)" min='400' max='10000' id='length'/>
     <br>
-    <p class="set_length" id="the_text"></p>
+	<p class="displaying" id="the_text">5200</p>
+    <h2 style="color:white"> Stroke </h2>
+    <input id="stroke_choosing"type="range" min="1" max="6" value="1" onchange="display_stroke(this)"/>
+    <p class="displaying" id="stroke_display">All</p>
+
     <button onclick="start()"> create swimming set </button>
   </div>
   <p id="text">Your set: </p>
@@ -214,6 +218,7 @@
   </footer>
   <a class="page_view" href="https://info.flagcounter.com/9DkL"><img src="https://s11.flagcounter.com/countxl/9DkL/bg_4A62FF/txt_FFFFF7/border_CCCCCC/columns_4/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
   <script>
+  	strokes = ['All','freestyle','backstroke','breaststroke','butterfly','IM'];
     document.getElementById("text").innerText = 'Your set:';
     function show_drills() {
       obj = document.getElementById("drills");
@@ -230,13 +235,13 @@
       drills = [["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","cobra strike drill","3 kick breast drill","heal tag drill","butterfly kick breast arms","under water dolphin kick","backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"],["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill"],["backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"],["cobra strike drill","3 kick breast drill","butterfly kick breast arms","heal tag drill","breaststroke kick on back"],["1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill"],["fist drill","zipper drill","head up drill","drag finger tips drill","with fins drill","1 hand butterfly drill","2-2-2 drill","freestyle kick and buttefly hand drill","with buoy drill","butterfly fist drill","cobra strike drill","3 kick breast drill","heal tag drill","butterfly kick breast arms","under water dolphin kick","backstroke pull","butterfly kick on back","breaststroke kick on back","backstroke windmill drill"]];
       document.getElementById("text").innerText = 'Your set:';
       set_length = Math.round(Number(document.getElementById('length').value)/25)*25;
-      stroke = prompt('What is the stroke (1)All (2)freestyle (3)backstroke (4)breaststroke (5)butterfly (6) IM')-1;
-      type_swim = prompt("do you want you (1) improve your sprint and endurance(with 2 drills) or (2) swimming postures(with 4 drills) or (3) custom ammount of drills.(type the number)");
+      type_swim = prompt('If you want to practice endurance and sprinting type 1 (with 2 drills), if you want postures, then type 2 (with 4 drills), and if you want a custom number of drills type 3')
       if (type_swim==='3'){
 	      drill_length = Number(prompt("how much yards of drills?(no more than "+ drills[stroke].length*100+')'))
       } else {
       	drill_length = type_swim*200
       }
+      stroke = document.getElementById('stroke_choosing').value
       test_length = set_length;
       warm_up = (3+Math.round(Math.random()))*50;
       document.getElementById("text").innerText += '\n--------warm up---------';
@@ -311,6 +316,9 @@
     }
     function edit_drill(text) {
     	document.getElementById("drill_information").innerText = "about the drill \n -----\n" + text;
+    }
+    function display_stroke(obj) {
+    	document.getElementById("stroke_display").innerText = strokes[obj.value-1];
     }
   </script>
 </body>
