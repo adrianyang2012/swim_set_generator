@@ -158,10 +158,16 @@
     }
     }
     .page_view {
-    	text_align:center;
+    	text-align:center;
     }
     .drills p {
     	margin:auto;
+    }
+    .displayer {
+    	text-align:center;
+        width:100%;
+        font-size:42px;
+        color:white;
     }
   </style>
 </head>
@@ -177,8 +183,8 @@
     <br>
 	<p class="displaying" id="the_text">5200</p>
     <h2 style="color:white"> Stroke </h2>
-    <input id="stroke_choosing"type="range" min="1" max="6" value="1" onchange="display_stroke(this)"/>
-    <p class="displaying" id="stroke_display">All</p>
+    <input id="stroke_choosing"type="range" min="1" max="6" value="1"/>
+    <div class="displayer">All Freestyle Backstroke Breaststroke Butterfly IM</div>
 
     <button onclick="start()"> create swimming set </button>
   </div>
@@ -317,9 +323,7 @@
     function edit_drill(text) {
     	document.getElementById("drill_information").innerText = "about the drill \n -----\n" + text;
     }
-    function display_stroke(obj) {
-    	document.getElementById("stroke_display").innerText = strokes[obj.value-1];
-    }
+
   </script>
 </body>
 </html>
