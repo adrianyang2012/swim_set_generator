@@ -57,6 +57,10 @@
       background-color:white;
       clear:both;
     }
+    .special {
+    	width:90px;
+        color:rgb(0,140,255);
+    }
     #text {
       font-size:30px;
       background-color:white;
@@ -157,17 +161,23 @@
     	visibility:visible;
     }
     }
-    .page_view {
-    	text-align:center;
-    }
+
     .drills p {
     	margin:auto;
     }
-    .displayer {
-    	text-align:center;
-        width:100%;
-        font-size:42px;
+
+    span {
+    	margin-right:5vw;
+        font-size:40px;
+    	background-color:blue;
         color:white;
+        border-color: rgb(0,0,0);
+        border-width:1px;
+        
+    }
+    .stroke_displaying {
+    	color:white;
+        font-size:30px;
     }
   </style>
 </head>
@@ -183,9 +193,14 @@
     <br>
 	<p class="displaying" id="the_text">5200</p>
     <h2 style="color:white"> Stroke </h2>
-    <input id="stroke_choosing"type="range" min="1" max="6" value="1"/>
-    <div class="displayer">All Freestyle Backstroke Breaststroke Butterfly IM</div>
-
+    <button class="special" onclick="stroke=0; display_stroke();">All</button>
+	<button class="special" onclick="stroke=1; display_stroke();">freestyle</button>
+	<button class="special" onclick="stroke=2; display_stroke();">backstroke</button>
+    <button class="special" onclick="stroke=3; display_stroke();">breaststroke</button>
+    <button class="special" onclick="stroke=4; display_stroke();">butterfly</button>
+    <button class="special" onclick="stroke=5; display_stroke();">IM</button>
+    <br>
+    <p id="stroke_displayer"class="stroke_displaying">All</p>
     <button onclick="start()"> create swimming set </button>
   </div>
   <p id="text">Your set: </p>
@@ -224,7 +239,8 @@
   </footer>
   <a class="page_view" href="https://info.flagcounter.com/9DkL"><img src="https://s11.flagcounter.com/countxl/9DkL/bg_4A62FF/txt_FFFFF7/border_CCCCCC/columns_4/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
   <script>
-  	strokes = ['All','freestyle','backstroke','breaststroke','butterfly','IM'];
+  	let stroke = 0;
+  	let strokes = ['All','freestyle','backstroke','breaststroke','butterfly','IM'];
     document.getElementById("text").innerText = 'Your set:';
     function show_drills() {
       obj = document.getElementById("drills");
@@ -247,7 +263,6 @@
       } else {
       	drill_length = type_swim*200
       }
-      stroke = document.getElementById('stroke_choosing').value
       test_length = set_length;
       warm_up = (3+Math.round(Math.random()))*50;
       document.getElementById("text").innerText += '\n--------warm up---------';
@@ -323,7 +338,9 @@
     function edit_drill(text) {
     	document.getElementById("drill_information").innerText = "about the drill \n -----\n" + text;
     }
-
+	function display_stroke() {
+    	document.getElementById('stroke_displayer').innerText = strokes[stroke];
+    }
   </script>
 </body>
 </html>
