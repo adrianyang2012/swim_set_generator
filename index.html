@@ -186,7 +186,7 @@
     <h1> Swimming Set Generator </h1>
     <h2 style="color:white"> Set Length </h2>
     <button onclick="getElementById('length').value = Number(getElementById('length').value)+50; display(getElementById('length'));">Increase Length</button>
-    <button onclick="getElementById('length').value-=50; display(getElementById('length'));">Decrease Length</button>
+    <button style="margin-bottom:10px" onclick="getElementById('length').value-=50; display(getElementById('length'));">Decrease Length</button>
     <input type='range' onchange="display(this)" min='400' max='10000' id='length'/>
     <br>
 	<p class="displaying" id="the_text">5200</p>
@@ -275,7 +275,7 @@
         if (test_length>300 && stroke===5 && type_swim === '1')  {
 		document.getElementById("text").innerText += '\n6x50 IM order (butterfly to back back to breast and then breast to free and repeat)';
 		test_length = test_length-200;
-		}
+	}
 	if (test_length>0) {
         document.getElementById("text").innerText += '\n-------drill set---------';
         if (test_length < drill_length+50) {
