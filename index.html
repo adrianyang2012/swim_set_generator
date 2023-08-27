@@ -185,6 +185,8 @@
   <div class="first">
     <h1> Swimming Set Generator </h1>
     <h2 style="color:white"> Set Length </h2>
+    <button onclick="add_item();">add item</button>
+    <br>
     <button onclick="getElementById('length').value = Number(getElementById('length').value)+50; display(getElementById('length'));">Increase Length</button>
     <br>
     <button style="margin-bottom:10px" onclick="getElementById('length').value-=50; display(getElementById('length'));">Decrease Length</button>
@@ -340,6 +342,18 @@
     	document.getElementById('stroke_displayer').innerText = strokes[stroke];
         document.getElementById('show_max_drills').innerText = 'Yards of Drills ' + '(no more than ' + drills[stroke].length*100 + ')';
     }
+    function add_item() {
+    	name = prompt('what is the name of the set');
+        amount = prompt('what is the length of the set');
+        repeating_times = prompt('how much times do you need to repeat that');
+        if (repeating_times>1) {
+    		document.getElementById('text').innerText += '\n' + repeating_times + 'x' + amount + ' ' + name;
+        } else {
+        	document.getElementById('text').innerText += '\n' + amount + ' ' + name;
+        }
+    }
+        	
+        
   </script>
 </body>
 </html>
