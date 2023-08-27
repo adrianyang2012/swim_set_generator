@@ -352,7 +352,10 @@
         	document.getElementById('text').innerText += '\n' + amount + ' ' + name;
         }
     }
-        	
+    function add_section() {
+	section_name = prompt('what is the section name');
+	document.getElementById('text').innerText += '----------------' + section_name + '--------------';
+    }
         
   </script>
 </body>
